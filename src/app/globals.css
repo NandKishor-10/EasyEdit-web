@@ -1,26 +1,191 @@
 @import "tailwindcss";
 
+/*
+  EasyEdit design tokens.
+  One theme (follows the system), one accent (acid lime, used only as a fill, never as text).
+  Shape rule: controls are pills, surfaces are rounded-3xl (24px), the phone frame is 40px.
+*/
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
+  --bg: #0e0e0d;
+  --surface: #161615;
+  --surface-2: #1f1f1d;
+  --fg: #f1f1ed;
+  --muted: #a6a6a0;
+  --line: #2c2c29;
+  --accent: #c8f23c;
+  --accent-fg: #10100f;
+  --graphite-a: #1c1c1a;
+  --graphite-b: #292925;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+    --bg: #f3f3ef;
+    --surface: #fafaf8;
+    --surface-2: #e8e8e3;
+    --fg: #10100f;
+    --muted: #595954;
+    --line: #d6d6cf;
+    --graphite-a: #e4e4de;
+    --graphite-b: #d3d3cb;
+  }
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-display: var(--font-bricolage), var(--font-geist-sans), system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+@media (pointer: fine) {
+  html {
+    overscroll-behavior: none;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a,
+button,
+summary,
+label {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-fg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--fg);
+  outline-offset: 3px;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* Surfaces */
+
+.tile-graphite {
+  background: linear-gradient(135deg, var(--graphite-a), var(--graphite-b));
+}
+
+.checker {
+  background-color: var(--surface-2);
+  background-image:
+    conic-gradient(var(--line) 25%, transparent 0 50%, var(--line) 0 75%, transparent 0);
+  background-size: 22px 22px;
+}
+
+.crop-grid {
+  background-image:
+    linear-gradient(to right, transparent calc(33.33% - 0.5px), rgb(255 255 255 / 0.5) calc(33.33% - 0.5px), rgb(255 255 255 / 0.5) calc(33.33% + 0.5px), transparent calc(33.33% + 0.5px), transparent calc(66.66% - 0.5px), rgb(255 255 255 / 0.5) calc(66.66% - 0.5px), rgb(255 255 255 / 0.5) calc(66.66% + 0.5px), transparent calc(66.66% + 0.5px)),
+    linear-gradient(to bottom, transparent calc(33.33% - 0.5px), rgb(255 255 255 / 0.5) calc(33.33% - 0.5px), rgb(255 255 255 / 0.5) calc(33.33% + 0.5px), transparent calc(33.33% + 0.5px), transparent calc(66.66% - 0.5px), rgb(255 255 255 / 0.5) calc(66.66% - 0.5px), rgb(255 255 255 / 0.5) calc(66.66% + 0.5px), transparent calc(66.66% + 0.5px));
+}
+
+/* Typing demo: steps() reveal of a monospace string, starts only when data-play is true */
+
+.typed {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: bottom;
+  width: 0;
+}
+
+.typed[data-play="true"] {
+  animation: typing calc(var(--n) * 60ms) steps(var(--n), end) 0.5s forwards;
+}
+
+@keyframes typing {
+  to {
+    width: calc(var(--n) * 1ch);
+  }
+}
+
+/* The single marquee on the page */
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 46s linear infinite;
+}
+
+.marquee-wrap[data-paused="true"] .marquee-track,
+.marquee-wrap:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Reduced motion: nothing pins, scales, scrolls or types. All content stays reachable. */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .stack-item {
+    position: static !important;
+    min-height: 0 !important;
+    padding-block: 0.75rem;
+  }
+
+  .stack-card {
+    transform: none !important;
+  }
+
+  .marquee-wrap {
+    overflow: visible;
+  }
+
+  .marquee-track {
+    animation: none;
+    width: auto;
+    flex-wrap: wrap;
+    gap: 0.5rem 2rem;
+  }
+
+  .marquee-dup {
+    display: none;
+  }
+
+  .typed {
+    width: auto;
+  }
 }
