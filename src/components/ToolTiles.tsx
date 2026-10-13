@@ -43,7 +43,7 @@ export function FiltersTile({ className = "" }: { className?: string }) {
         title="Filters that set the mood."
         body="Pop, Vivid, Mono and more. Tap one to try it on this photo."
       />
-      <div className="relative min-h-[22rem] flex-1 overflow-hidden rounded-2xl bg-surface-2">
+      <div className="relative min-h-88 flex-1 overflow-hidden rounded-2xl bg-surface-2">
         <AnimatePresence initial={false}>
           <motion.div
             key={active.id}
@@ -99,7 +99,7 @@ export function CropTile({ className = "" }: { className?: string }) {
         title="Crop to a better frame."
         body="Straighten, rotate and trim to the ratio you need."
       />
-      <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl bg-surface-2">
+      <div className="relative aspect-16/10 w-full overflow-hidden rounded-2xl bg-surface-2">
         <Image
           src={img(IMG.lake, 900)}
           alt="Landscape photo with a crop frame over it"
@@ -143,7 +143,7 @@ export function AdjustTile({ className = "" }: { className?: string }) {
         title="Fine-tune the colors."
         body="Brightness, contrast and saturation, live on this photo."
       />
-      <div className="relative mb-5 aspect-[16/9] w-full overflow-hidden rounded-2xl bg-surface-2">
+      <div className="relative mb-5 aspect-video w-full overflow-hidden rounded-2xl bg-surface-2">
         <Image
           src={img(IMG.waves, 900)}
           alt="Ocean waves photo adjusted by the sliders below"
@@ -165,7 +165,7 @@ export function AdjustTile({ className = "" }: { className?: string }) {
               min={s.min}
               max={s.max}
               defaultValue={100}
-              className="h-6 w-full cursor-pointer accent-[var(--accent)]"
+              className="h-6 w-full cursor-pointer accent-accent"
               onInput={(e) =>
                 root.current?.style.setProperty(`--${s.id}`, String(Number(e.currentTarget.value) / 100))
               }

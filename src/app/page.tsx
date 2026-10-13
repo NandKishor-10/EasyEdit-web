@@ -66,7 +66,7 @@ export default function Home() {
 
       <main id="main">
         {/* Hero: asymmetric split, fits the first viewport */}
-        <section className="mx-auto grid min-h-[calc(100dvh-4.5rem)] max-w-[1400px] items-center gap-14 px-5 pb-20 pt-10 md:px-8 lg:grid-cols-[1.25fr_0.75fr] lg:pt-16">
+        <section className="mx-auto grid min-h-[calc(100dvh-4.5rem)] max-w-350 items-center gap-14 px-5 pb-20 pt-10 md:px-8 lg:grid-cols-[1.25fr_0.75fr] lg:pt-16">
           <div>
             <HeroHeadline />
             <p className="mt-7 max-w-md text-lg leading-relaxed text-muted">
@@ -92,7 +92,7 @@ export default function Home() {
 
         {/* AI tools: sticky stack */}
         <section id="ai" className="pt-12 md:pt-20">
-          <div className="mx-auto max-w-[1400px] px-5 pb-12 md:px-8 md:pb-20">
+          <div className="mx-auto max-w-350 px-5 pb-12 md:px-8 md:pb-20">
             <Reveal>
               <h2 className="font-display text-[clamp(3.25rem,9vw,8rem)] font-extrabold leading-[0.95] tracking-[-0.045em]">
                 Push the picture.
@@ -108,11 +108,11 @@ export default function Home() {
 
         {/* AI styles: the one marquee */}
         <section aria-labelledby="styles-title" className="py-24 md:py-36">
-          <div className="mx-auto mb-12 max-w-[1400px] px-5 md:px-8">
+          <div className="mx-auto mb-12 max-w-350 px-5 md:px-8">
             <Reveal>
               <h2
                 id="styles-title"
-                className="font-display text-[clamp(2.5rem,6vw,5rem)] font-extrabold leading-[1] tracking-[-0.04em]"
+                className="font-display text-[clamp(2.5rem,6vw,5rem)] font-extrabold leading-none tracking-[-0.04em]"
               >
                 Every trend, one tap.
               </h2>
@@ -128,7 +128,7 @@ export default function Home() {
         </section>
 
         {/* Everyday tools: bento with live previews */}
-        <section id="essentials" className="mx-auto max-w-[1400px] px-5 pb-28 md:px-8 md:pb-40">
+        <section id="essentials" className="mx-auto max-w-350 px-5 pb-28 md:px-8 md:pb-40">
           <Reveal>
             <h2 className="font-display text-[clamp(2.75rem,7vw,6rem)] font-extrabold leading-[0.98] tracking-[-0.045em]">
               Good edits don&rsquo;t need to be complicated.
@@ -150,10 +150,10 @@ export default function Home() {
         {/* FAQ: crawlable answers, mirrored in FAQPage JSON-LD */}
         <section
           id="faq"
-          className="mx-auto grid max-w-[1400px] gap-12 px-5 pb-28 md:px-8 md:pb-40 lg:grid-cols-[0.8fr_1.2fr]"
+          className="mx-auto grid max-w-350 gap-12 px-5 pb-28 md:px-8 md:pb-40 lg:grid-cols-[0.8fr_1.2fr]"
         >
           <div className="lg:sticky lg:top-28 lg:self-start">
-            <h2 className="font-display text-[clamp(2.5rem,6vw,5rem)] font-extrabold leading-[1] tracking-[-0.04em]">
+            <h2 className="font-display text-[clamp(2.5rem,6vw,5rem)] font-extrabold leading-none tracking-[-0.04em]">
               Questions, answered.
             </h2>
           </div>

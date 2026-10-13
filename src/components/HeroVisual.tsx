@@ -14,12 +14,12 @@ export function HeroVisual() {
   const tilt = useTransform(scrollYProgress, [0, 1], [-6, -12]);
 
   return (
-    <div ref={ref} className="relative mx-auto w-full max-w-[26rem] lg:ml-auto lg:mr-0">
+    <div ref={ref} className="relative mx-auto w-full max-w-104 lg:ml-auto lg:mr-0">
       {/* Depth layer: drifts against the scroll so the phone feels like it sits in front of it. */}
       <motion.div
         aria-hidden
         style={reduce ? { rotate: -6 } : { y, rotate: tilt }}
-        className="absolute -bottom-[7%] -left-[20%] -z-10 aspect-[3/4] w-[48%] overflow-hidden rounded-3xl border border-line max-sm:hidden"
+        className="absolute bottom-[-7%] left-[-20%] -z-10 aspect-3/4 w-[48%] overflow-hidden rounded-3xl border border-line max-sm:hidden"
       >
         <Image
           src={img(IMG.waves, 700)}

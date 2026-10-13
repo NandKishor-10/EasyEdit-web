@@ -234,7 +234,7 @@ function StackCard({
     >
       <motion.article
         style={{ scale }}
-        className="stack-card mx-auto grid w-full max-w-[1400px] origin-top gap-6 rounded-3xl border border-line bg-surface p-5 md:grid-cols-[0.8fr_1.2fr] md:gap-12 md:p-8"
+        className="stack-card mx-auto grid w-full max-w-350 origin-top gap-6 rounded-3xl border border-line bg-surface p-5 md:grid-cols-[0.8fr_1.2fr] md:gap-12 md:p-8"
       >
         <div className="flex flex-col justify-between gap-8 md:py-4">
           <div className="inline-flex w-fit items-center gap-2 rounded-full border border-line px-3.5 py-2 text-sm text-muted">
@@ -250,7 +250,7 @@ function StackCard({
             </p>
           </div>
         </div>
-        <div className="aspect-[4/3] min-h-0 w-full md:aspect-auto md:h-[min(62dvh,34rem)]">
+        <div className="aspect-4/3 min-h-0 w-full md:aspect-auto md:h-[min(62dvh,34rem)]">
           {feature.demo}
         </div>
       </motion.article>

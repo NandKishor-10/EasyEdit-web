@@ -40,7 +40,7 @@ function Word({
 /** Words rise out of a mask in sequence, then the last word is underlined. */
 export function HeroHeadline() {
   return (
-    <h1 className="font-display text-[clamp(2.75rem,8.4vw,7.25rem)] font-extrabold leading-[1] tracking-[-0.045em]">
+    <h1 className="font-display text-[clamp(2.75rem,8.4vw,7.25rem)] font-extrabold leading-none tracking-[-0.045em]">
       <Word index={0}>Make</Word> <Word index={1}>something</Word>
       <br />
       <Word index={2} underline>
