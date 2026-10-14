@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowUpRight, EnvelopeSimple } from "@phosphor-icons/react/dist/ssr";
+import { EnvelopeSimpleIcon, ArrowUpRightIcon } from "@phosphor-icons/react/dist/ssr";
 import { Footer, Header } from "@/components/Chrome";
 import { ContactForm } from "@/components/ContactForm";
 import { Reveal } from "@/components/Reveal";
@@ -68,7 +68,7 @@ export default function ContactPage() {
               className="group mt-10 flex w-fit max-w-full items-center gap-4 rounded-3xl border border-line bg-surface p-5 transition-colors hover:bg-surface-2"
             >
               <span className="grid size-12 shrink-0 place-items-center rounded-full bg-accent text-accent-fg">
-                <EnvelopeSimple aria-hidden size={24} weight="regular" />
+                <EnvelopeSimpleIcon aria-hidden size={24} weight="regular" />
               </span>
               <span className="min-w-0">
                 <span className="block text-sm text-muted">Email support</span>
@@ -84,7 +84,7 @@ export default function ContactPage() {
                     className="group flex items-center justify-between rounded-full px-1 py-2.5 text-base text-muted transition-colors hover:text-fg"
                   >
                     {l.label}
-                    <ArrowUpRight
+                    <ArrowUpRightIcon
                       aria-hidden
                       size={18}
                       weight="regular"
