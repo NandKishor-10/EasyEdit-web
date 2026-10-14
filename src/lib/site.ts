@@ -77,3 +77,39 @@ export const FAQS = [
     a: "Yes. Use the Delete account page at any time. The Privacy Policy explains what data the app processes.",
   },
 ] as const;
+
+
+
+export type PolicySlug =
+  | "privacy-policy"
+  | "image-data-usage"
+  | "terms-of-service";
+
+export type Policy = {
+  slug: PolicySlug;
+  title: string;
+  version: number;
+  updatedAt: string;
+  content: string;
+};
+
+export async function getPolicy(slug: PolicySlug): Promise<Policy> {
+  const apiUrl = process.env.NEXT_PUBLIC_POLICIES;
+
+  if (!apiUrl) {
+    throw new Error("NEXT_PUBLIC_POLICIES is not configured");
+  }
+
+  const url = new URL(apiUrl);
+  url.searchParams.set("slug", slug);
+
+  const response = await fetch(url.toString(), {
+    next: { revalidate: 3600 },
+  });
+
+  if (!response.ok) {
+    throw new Error(`Failed to fetch policy: ${slug}`);
+  }
+
+  return response.json();
+}

@@ -35,7 +35,7 @@ const NAV = [
 export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-bg/80 backdrop-blur-xl">
-      <div className="mx-auto flex h-[4.5rem] max-w-[1400px] items-center justify-between gap-6 px-5 md:px-8">
+      <div className="mx-auto flex h-18 max-w-350 items-center justify-between gap-6 px-5 md:px-8">
         <Mark />
         <nav aria-label="Main" className="hidden items-center gap-8 md:flex">
           {NAV.map((item) => (
@@ -57,12 +57,12 @@ export function Header() {
 export function Footer() {
   return (
     <footer className="border-t border-line">
-      <div className="mx-auto flex max-w-[1400px] flex-wrap items-center justify-between gap-6 px-5 py-8 md:px-8">
+      <div className="mx-auto flex max-w-350 flex-wrap items-center justify-between gap-6 px-5 py-8 md:px-8">
         <Mark />
         <nav aria-label="Legal" className="flex flex-wrap gap-x-6 gap-y-2">
           {[
-            ["/privacy-policy", "Privacy"],
-            ["/terms", "Terms"],
+            ["/policies?policy=privacy-policy", "Privacy"],
+            ["/policies?policy=terms-of-service", "Terms"],
             ["/delete-account", "Delete account"],
             ["/contact", "Contact"],
           ].map(([href, label]) => (

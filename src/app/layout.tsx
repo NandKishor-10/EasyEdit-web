@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Bricolage_Grotesque, Geist, Geist_Mono } from "next/font/google";
+import { Bricolage_Grotesque, Geist, Geist_Mono, Quicksand } from "next/font/google";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
@@ -59,13 +59,19 @@ export const viewport: Viewport = {
   ],
 };
 
+const quicksand = Quicksand({
+  variable: "--font-quicksand",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${bricolage.variable}`}
     >
-      <body className="min-h-dvh overflow-x-clip antialiased">{children}</body>
+      <body className={`${quicksand.variable} min-h-dvh overflow-x-clip antialiased`}>{children}</body>
     </html>
   );
 }

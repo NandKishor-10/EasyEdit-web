@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [{ protocol: "https", hostname: "images.unsplash.com" }],
     formats: ["image/avif", "image/webp"],
   },
+  allowedDevOrigins: ['127.0.0.1'],
   turbopack: {
     rules: {
       "*.css": {

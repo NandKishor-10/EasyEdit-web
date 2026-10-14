@@ -32,8 +32,8 @@ const jsonLd = {
 
 const LINKS = [
   { href: "/delete-account", label: "Delete your account" },
-  { href: "/privacy-policy", label: "Privacy Policy" },
-  { href: "/terms", label: "Terms of Service" },
+  { href: "/policies?policy=privacy-policy", label: "Privacy Policy" },
+  { href: "/policies?policy=terms-of-service", label: "Terms of Service" },
 ];
 
 export default function ContactPage() {
@@ -49,7 +49,7 @@ export default function ContactPage() {
 
       <main
         id="main"
-        className="mx-auto grid max-w-[1400px] gap-14 px-5 pb-28 pt-12 md:px-8 md:pt-20 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20"
+        className="mx-auto grid max-w-350 gap-14 px-5 pb-28 pt-12 md:px-8 md:pt-20 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20"
       >
         <div className="lg:sticky lg:top-28 lg:self-start">
           <Reveal>
@@ -72,7 +72,7 @@ export default function ContactPage() {
               </span>
               <span className="min-w-0">
                 <span className="block text-sm text-muted">Email support</span>
-                <span className="block break-words text-lg font-semibold">{SUPPORT_EMAIL}</span>
+                <span className="block wrap-break-word text-lg font-semibold">{SUPPORT_EMAIL}</span>
               </span>
             </a>
 
