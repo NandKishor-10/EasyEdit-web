@@ -1,9 +1,8 @@
-
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: "/easyedit-web",
+  basePath: "/EasyEdit-web",
   trailingSlash: true,
   poweredByHeader: false,
   images: {
