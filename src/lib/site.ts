@@ -1,5 +1,5 @@
 export const SITE_NAME = "EasyEdit";
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://NandKihsor-10.github.io/easyedit-web";
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://NandKihsor-10.github.io/EasyEdit-web";
 
 // TODO: replace with the real Google Play package id before launch.
 export const PLAY_URL =
