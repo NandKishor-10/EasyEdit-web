@@ -45,8 +45,10 @@ export const metadata: Metadata = {
     title: `${SITE_NAME}: AI Photo Editor for Android`,
     description,
   },
-  // app/favicon.ico is picked up automatically; the big icon covers home-screen / touch icons.
-  icons: { apple: "/EasyEdit-web/icon.png" },
+  icons: {
+    icon: "/EasyEdit-web/favicon.ico",
+    apple: "/EasyEdit-web/icon.png",
+  },
   robots: { index: true, follow: true },
   category: "photography",
 };
