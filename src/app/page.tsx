@@ -25,7 +25,7 @@ const jsonLd = [
     "@type": "MobileApplication",
     name: SITE_NAME,
     url: SITE_URL,
-    image: `${SITE_URL}/EasyEdit-web/icon.png`,
+    image: `${SITE_URL}/icon.png`,
     description:
       "AI photo editor for Android with prompt editing, background removal, image expand, quality enhance, AI styles, filters, crop, text and markup.",
     applicationCategory: "PhotographyApplication",
