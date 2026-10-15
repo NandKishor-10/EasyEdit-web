@@ -55,7 +55,7 @@ export default function PolicySelector({
       {isOpen && (
         <div
           role="listbox"
-          className="absolute z-10 mt-2 w-full border border-[#dcdcd7] bg-[#f8f8f6] py-1 shadow-lg"
+          className="absolute z-10 mt-2 w-full rounded-2xl bg-white/10 border border-[#dcdcd7] shadow-lg"
         >
           {policies.map((policy) => (
             <button
@@ -64,7 +64,7 @@ export default function PolicySelector({
               role="option"
               aria-selected={selected.slug === policy.slug}
               onClick={() => handleSelect(policy.slug)}
-              className={`block w-full px-4 py-3 text-left text-[#101010] transition-colors hover:bg-[#ededE9] ${selected.slug === policy.slug ? "font-semibold" : ""
+              className={`block w-full px-4 py-3 text-left rounded-2xl transition-colors hover:bg-white/30 ${selected.slug === policy.slug ? "font-semibold bg-accent text-black" : "text-white"
                 }`}
             >
               {policy.title}

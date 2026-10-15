@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion, useSpring } from "motion/react";
-import { GooglePlayLogo } from "@phosphor-icons/react/dist/ssr";
+import { GooglePlayLogoIcon } from "@phosphor-icons/react/dist/ssr";
 import { CTA_LABEL, PLAY_URL } from "@/lib/site";
 
 type Props = {
@@ -43,7 +43,7 @@ export function PlayButton({ size = "md", tone = "accent", magnetic = false }: P
       }}
       className={`inline-flex items-center gap-2.5 whitespace-nowrap rounded-full font-semibold transition-colors ${sizing} ${colors}`}
     >
-      <GooglePlayLogo aria-hidden size={size === "lg" ? 22 : 18} weight="regular" />
+      <GooglePlayLogoIcon aria-hidden size={size === "lg" ? 22 : 18} weight="regular" />
       {CTA_LABEL}
       <span className="sr-only"> on Google Play</span>
     </motion.a>
