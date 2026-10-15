@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://NandKishor-10.github.io/easyedit-web/sitemap.xml
