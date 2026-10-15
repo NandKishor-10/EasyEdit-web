@@ -18,14 +18,13 @@ export function DownloadBlock() {
       ref={ref}
       className="relative isolate overflow-hidden bg-accent px-5 py-28 text-center text-accent-fg md:py-40"
     >
-      {/* Big icon (public/icon.png) as the background: drifts and turns as the section crosses the screen. */}
       <motion.div
         aria-hidden
         style={reduce ? { rotate: -12 } : { y, rotate }}
         className="pointer-events-none absolute left-1/2 top-1/2 -z-10 w-[min(85vw,52rem)] -translate-x-1/2 -translate-y-1/2 select-none opacity-[0.16] mix-blend-multiply"
       >
         <Image
-          src="./icon.png"
+          src={"EasyEdit-web/icon.png"}
           alt=""
           width={1024}
           height={1024}
