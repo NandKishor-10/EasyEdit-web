@@ -26,6 +26,10 @@ export default async function PoliciesPage({
       <PolicySelector currentPolicy={slug} />
 
       <article className="policy-content">
+        <header>
+          <h1>{policy.title}</h1>
+          <h3> Last updated: {policy.updatedAt}</h3>
+        </header>
         <ReactMarkdown>{policy.content}</ReactMarkdown>
       </article>
     </main>
