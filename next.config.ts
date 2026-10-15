@@ -1,12 +1,19 @@
+
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "export",
+  basePath: "/easyedit-web",
+  trailingSlash: true,
   poweredByHeader: false,
   images: {
-    remotePatterns: [{ protocol: "https", hostname: "images.unsplash.com" }],
+    unoptimized: true,
+    remotePatterns: [
+      { protocol: "https", hostname: "images.unsplash.com" },
+    ],
     formats: ["image/avif", "image/webp"],
   },
-  allowedDevOrigins: ['127.0.0.1'],
+  allowedDevOrigins: ["127.0.0.1"],
   turbopack: {
     rules: {
       "*.css": {

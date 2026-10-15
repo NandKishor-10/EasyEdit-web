@@ -1,5 +1,5 @@
 export const SITE_NAME = "EasyEdit";
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://easyedit.app";
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://NandKihsor-10.github.io/easyedit-web";
 
 // TODO: replace with the real Google Play package id before launch.
 export const PLAY_URL =
@@ -7,7 +7,7 @@ export const PLAY_URL =
   "https://play.google.com/store/apps/details?id=com.easyedit.app";
 
 // TODO: replace with the real support inbox. It is shown on the contact page and used by the form.
-export const SUPPORT_EMAIL = process.env.NEXT_PUBLIC_SUPPORT_EMAIL ?? "support@easyedit.app";
+export const SUPPORT_EMAIL = process.env.NEXT_PUBLIC_SUPPORT_EMAIL ?? "nandkishor10.dev@gmail.com";
 
 export const CTA_LABEL = "Get the app";
 

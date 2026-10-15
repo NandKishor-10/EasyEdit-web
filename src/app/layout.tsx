@@ -70,6 +70,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${bricolage.variable}`}
+      data-scroll-behavior="smooth"
     >
       <body className={`${quicksand.variable} min-h-dvh overflow-x-clip antialiased`}>{children}</body>
     </html>
