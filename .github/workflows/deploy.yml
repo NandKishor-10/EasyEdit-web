@@ -18,6 +18,13 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: github-pages
+    env:
+      NEXT_PUBLIC_POLICIES: ${{ secrets.NEXT_PUBLIC_POLICIES }}
+      NEXT_PUBLIC_SUPPORT_EMAIL: ${{ secrets.NEXT_PUBLIC_SUPPORT_EMAIL }}
+      NEXT_PUBLIC_PLAY_URL: ${{ secrets.NEXT_PUBLIC_PLAY_URL }}
+      NEXT_PUBLIC_SITE_URL: ${{ secrets.NEXT_PUBLIC_SITE_URL }}
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
