@@ -39,7 +39,7 @@ export function Manifesto() {
   const words = TEXT.split(" ");
 
   return (
-    <section className="mx-auto max-w-[1400px] px-5 py-28 md:px-8 md:py-44">
+    <section className="mx-auto max-w-350 px-5 py-28 md:px-8 md:py-44">
       <p
         ref={ref}
         className="mx-auto max-w-5xl font-display text-[clamp(2rem,5.2vw,4.6rem)] font-bold leading-[1.08] tracking-[-0.035em]"

@@ -11,7 +11,7 @@ export function Mark() {
       className="group inline-flex items-center gap-2.5 font-display text-xl font-extrabold tracking-[-0.04em]"
     >
       <Image
-        src={"./favicon.ico"}
+        src="/EasyEdit-web/favicon.ico"
         alt=""
         width={36}
         height={36}

@@ -2,7 +2,7 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowsLeftRight, Sparkle } from "@phosphor-icons/react";
+import { ArrowsLeftRightIcon, SparkleIcon } from "@phosphor-icons/react";
 
 const beforeImage =
   "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1400&q=90";
@@ -44,12 +44,12 @@ export function BeforeAfter() {
         aria-hidden="true"
       >
         <span className="comparison-handle">
-          <ArrowsLeftRight size={18} weight="regular" />
+          <ArrowsLeftRightIcon size={18} weight="regular" />
         </span>
       </div>
 
       <div className="comparison-caption">
-        <span><Sparkle size={15} /> A DIFFERENT POINT OF VIEW</span>
+        <span><SparkleIcon size={15} /> A DIFFERENT POINT OF VIEW</span>
         <span>{String(Math.round(position)).padStart(2, "0")} / 100</span>
       </div>
     </div>
