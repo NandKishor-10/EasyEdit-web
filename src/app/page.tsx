@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
+import { ArrowRightIcon } from "@phosphor-icons/react/dist/ssr";
 import { Footer, Header } from "@/components/Chrome";
 import { DownloadBlock } from "@/components/DownloadBlock";
 import { Faq } from "@/components/Faq";
@@ -25,7 +25,7 @@ const jsonLd = [
     "@type": "MobileApplication",
     name: SITE_NAME,
     url: SITE_URL,
-    image: `${SITE_URL}/icon.png`,
+    image: `${SITE_URL}/EasyEdit-web/icon.png`,
     description:
       "AI photo editor for Android with prompt editing, background removal, image expand, quality enhance, AI styles, filters, crop, text and markup.",
     applicationCategory: "PhotographyApplication",
@@ -80,7 +80,7 @@ export default function Home() {
                 className="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-line px-6 py-4 text-base font-semibold transition-colors hover:bg-surface-2"
               >
                 See what it does
-                <ArrowRight aria-hidden size={18} weight="regular" />
+                <ArrowRightIcon aria-hidden size={18} weight="regular" />
               </Link>
             </div>
           </div>

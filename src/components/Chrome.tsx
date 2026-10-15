@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { PlayButton } from "@/components/PlayButton";
-// Very small icon: the app's favicon, used as the logo mark in the header and footer.
-import favicon from "@/app/favicon.ico";
 
 export function Mark() {
   return (
@@ -13,7 +11,7 @@ export function Mark() {
       className="group inline-flex items-center gap-2.5 font-display text-xl font-extrabold tracking-[-0.04em]"
     >
       <Image
-        src={favicon}
+        src={"./favicon.ico"}
         alt=""
         width={36}
         height={36}
