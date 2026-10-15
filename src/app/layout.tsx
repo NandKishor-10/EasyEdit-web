@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     description,
   },
   // app/favicon.ico is picked up automatically; the big icon covers home-screen / touch icons.
-  icons: { apple: "/icon.png" },
+  icons: { apple: "./icon.png" },
   robots: { index: true, follow: true },
   category: "photography",
 };
