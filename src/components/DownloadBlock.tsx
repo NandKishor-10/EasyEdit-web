@@ -24,7 +24,7 @@ export function DownloadBlock() {
         className="pointer-events-none absolute left-1/2 top-1/2 -z-10 w-[min(85vw,52rem)] -translate-x-1/2 -translate-y-1/2 select-none opacity-[0.16] mix-blend-multiply"
       >
         <Image
-          src={"EasyEdit-web/icon.png"}
+          src={"./icon.png"}
           alt=""
           width={1024}
           height={1024}
